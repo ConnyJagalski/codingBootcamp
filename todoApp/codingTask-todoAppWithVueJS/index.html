@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <h1>Your Todo's</h1>
+    </header>
+    <main>
+      <form>
+        <input type="radio" name="sort" id="all" @input="showAllTodos">
+        <label for="all">Show All</label>
+        <br>
+        <input type="radio" name="sort" id="open" @input="showOpenTodos">
+        <label for="open">Show Open</label>
+        <br>
+        <input type="radio" name="sort" id="done" @input="showDoneTodos">
+        <label for="done">Show Done</label>
+        <br>
+        <!-- gibt es eine möglichkeit, wie ich den remove button vor den add button also eine etage höher setze ohne dabei auszulösen, dass bei enter der remove button ausgelöst wird??? -->
+        <input type="text" name="newTodo" id="newTodo">
+        <button @click.prevent="validateInput" id="addButton">Add</button>
+        <br>
+        <button id="removeButton" @click.prevent="removeDone">Remove done</button>
+      </form>
+      <ul>
+        <li v-for="todo of currentShownList" :key="todo.description">
+          <label :class="{'done-todos': todo.done}">
+            <!-- kann ich den state der checkbox mit z.b. v-model einfacher verbinden??? -->
+            <input type="checkbox" name="checkbox" :key="todo.id" :id="todo.id" @click="changeStateOfTodo(todo.id)"
+              :checked="todo.done">
+            {{ todo.description }}
+          </label>
+        </li>
+      </ul>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

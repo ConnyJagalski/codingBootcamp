@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Handlee&display=swap');
+
+:root {
+  --blue-blurred: rgba(28, 35, 220, 0.571);
+  --rem2: 2rem;
+  --rem1: 1rem;
+  --rem05: 0.5rem;
+  --rem03: 0.3rem;
+  --rem02: 0.2rem;
+}
+
+html, button, #newTodo {
+  font-family: 'Handlee', cursive;
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  padding-block: var(--rem02);
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background: linear-gradient(rgb(237, 187, 202) 0%, rgb(227, 135, 227) 100%);
+}
+
+main {
+  padding: var(--rem1);
+}
+
+h1 {
+  margin-block: 0;
+  color: var(--blue-blurred);
+  text-shadow: -1px 1px 2px rgb(240, 238, 238);
+  font-family: 'Bungee Shade', cursive;
+}
+
+button {
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--rem05);
+  background-color: var(--blue-blurred);
+  border: none;
+  color: white;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin-block: var(--rem02);
+}
+
+.done-todos {
+  color: green;
+  text-decoration: line-through;
+}
+
+#removeButton {
+  margin-block: var(--rem1);
+}
+
+#all, #open, #done {
+  margin: var(--rem03);
+}
+
+#newTodo {
+  padding: var(--rem03);
+  margin-right: var(--rem05);
+  border-radius: var(--rem05);
+  margin-top: var(--rem1);
+  width: 50%;
+  border: 0.5px solid purple;
+}
+
+#newTodo:focus {
+  box-shadow: inset 0 0 10px rgb(230, 62, 218);
+  /* wieso kann ich hier nicht die border wegnehmen, die kommt, wenn ich ins feld reinklicke??? */
+  border: none;
+}

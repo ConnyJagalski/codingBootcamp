@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  background-color: #fffafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 1.5s;
+}
+
+button {
+  all: unset;
+  font-size: 2rem;
+  font-family: monospace;
+  border: solid black 0.3rem;
+  padding: 0.5rem 1rem;
+  
+}
+
+.dark-background {
+  background-color: #333333;
+  color: white;
+}
+
+.dark-button {
+  border-color: white;
+  box-shadow: #d8d80a 0 0 10px 5px;
+}

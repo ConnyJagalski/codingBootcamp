@@ -1,0 +1,18 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button, input {
+  font-size: 250%;
+  font-family: monospace;
+}
+
+input {
+  margin-right: 1rem;
+}

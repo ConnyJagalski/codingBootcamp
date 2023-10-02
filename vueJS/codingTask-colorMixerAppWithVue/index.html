@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Coding Task: Color Mixer</title>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <div>
+        <label for="r">r</label>
+        <input type="range" step="1" min="0" max="255" id="r" v-model="r" @input="setBackgroundColor">
+        <label for="g">g</label>
+        <input type="range" step="1" min="0" max="255" id="g" v-model="g" @input="setBackgroundColor">
+        <label for="b">b</label>
+        <input type="range" step="1" min="0" max="255" id="b" v-model="b" @input="setBackgroundColor">
+      </div>
+      <span>{{ color }}</span>
+      <button @click.prevent="getRandomColor">Get random color</button>
+    </header>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
