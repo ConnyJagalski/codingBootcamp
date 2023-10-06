@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "cypress": "^13.3.0",
+    "serve": "^14.2.1"
+  },
+  "scripts": {
+    "serve": "serve ./src",
+    "e2e": "cypress open"
+  },
+  "name": "codingtask-installcypressandlocaldevelopmentserver",
+  "description": "You will use Cypress to cover a given Todo App with end-2-end tests.",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "baseUrl": "http://localhost:3000"
+}
