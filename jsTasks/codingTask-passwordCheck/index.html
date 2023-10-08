@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Password Check</h1>
+    </header>
+
+    <div>
+        <main>
+            <input type="password" id="pw1">
+            <input type="password" id="pw2">
+            <button id="show-hide-pwd">Show Password</button>
+        </main>
+        
+        <aside>
+            <p>
+                Passwords are equal
+                <span id="match-not">❌</span>
+                <span id="match-ok" hidden>✅</span>
+            </p>
+            <p>
+                Lower Case Letters
+                <span id="lower-case-not">❌</span>
+                <span id="lower-case-ok" hidden>✅</span>
+            </p>
+            <p>
+                Lower Case Letters
+                <span id="upper-case-not">❌</span>
+                <span id="upper-case-ok" hidden>✅</span>
+            </p>
+            <p>
+                Contains Numbers
+                <span id="number-not">❌</span>
+                <span id="number-ok" hidden>✅</span>
+            </p>
+            <p>
+                At least 10 characters long
+                <span id="char-not">❌</span>
+                <span id="char-ok" hidden>✅</span>
+            </p>
+        </aside>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

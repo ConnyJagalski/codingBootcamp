@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap");
+
+body {
+  background: lightsalmon;
+}
+
+div,
+header,
+main,
+aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+body,
+input,
+button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+input,
+button {
+  border: solid black 2px;
+  border-radius: 2px;
+  padding: 0.2rem 0.5rem;
+  margin-block: 0.5rem;
+}
+
+button {
+  background: black;
+  color: white;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  color: white;
+  text-shadow: black 3px 2px;
+}
+
+@media (min-width: 700px) {
+  div {
+    flex-direction: row;
+  }
+}
